@@ -1,5 +1,3 @@
 # Test
 
 [Python Notes](https://stevenkhwun.github.io/Test/%40PythonNotes.html)
-
-Last updated on 17 December 2023
