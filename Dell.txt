@@ -1,1 +1,0 @@
-Create a new text file from Dell Desktop and push to GitHub.
