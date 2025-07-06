@@ -1,7 +1,7 @@
 ---
-title: "Online_Books"
+title: "Online Books"
 author: "SW"
-date: "`r Sys.Date()`"
+date: Last updated on `r Sys.Date()`
 output: html_document
 ---
 
@@ -12,11 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Machine Learning
 
 
-* [An Introduction to Statistical Learning with Applications in Python](https://stevenkhwun.github.io/Test/Books/ISLP_website-compressed.pdf)
-
-  Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, Jonathan Taylor
-  
-  Web version printed on 5 July 2023
+* [An Introduction to Statistical Learning with Applications in Python](https://stevenkhwun.github.io/Test/Books/ISLP_website-compressed.pdf), PDF version, by _Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani and Jonathan Taylor_. Printed on 5 July 2023.
 * Another Book
 
   Written by
@@ -27,4 +23,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Python
 
-* [Python for Excel](https://stevenkhwun.github.io/Test/Books/Python-for-Excel.pdf)
+* [Python for Excel: A Modern Environment for Automation and Data Analysis](https://stevenkhwun.github.io/Test/Books/Python-for-Excel.pdf), PDF version, by _Felix Zumstein_. (1st Edition, March 2021)
