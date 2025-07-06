@@ -25,10 +25,6 @@ knitr::opts_chunk$set(echo = TRUE)
 * Third book
   
 
-You can also embed plots, for example:
+## Python
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+* [Python for Excel](https://stevenkhwun.github.io/Test/Books/Python-for-Excel.pdf)
