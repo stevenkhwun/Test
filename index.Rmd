@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
   
 ## Mathematics
 
-* [Solving Mathematical Problems](https://stevenkhwun.github.io/Test/Books/Mathematics/solving-mathematical-problems-terence-tao.pdf), PDF version, by _Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani and Jonathan Taylor_. Printed on 5 July 2023.
+* [Solving Mathematical Problems: A Personal Perspective](https://stevenkhwun.github.io/Test/Books/Mathematics/solving-mathematical-problems-terence-tao.pdf), PDF version, by _Terence Tao_. (2nd Edition, 2006)
 
 
 
