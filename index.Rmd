@@ -42,6 +42,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [R for Data Science: Import, Tidy, Transform, Visualize, and Model Data](https://r4ds.hadley.nz/), Web version, by _Hadley Wickham, Mine Cetinkaya-Rundel, and Garrett Grolemund_. (2nd Edition, July 2023)
 
+  The solutions to the exercises of the book can be found [here](https://mine-cetinkaya-rundel.github.io/r4ds-solutions/).
+
 * [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/), Web version, by _Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton_. (3rd Edition (in progress), July 2024)
 
   The 2nd edition of the book can be found [here](https://mdsr-book.github.io/mdsr2e/).
