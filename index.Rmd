@@ -29,3 +29,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Python
 
 * [Python for Excel: A Modern Environment for Automation and Data Analysis](https://stevenkhwun.github.io/Test/Books/Python/Python-for-Excel.pdf), PDF version, by _Felix Zumstein_. (1st Edition, March 2021)
+  
+  The GitHub site of the book can be found [here](https://github.com/fzumstein/python-for-excel).
