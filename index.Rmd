@@ -24,10 +24,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Solving Mathematical Problems: A Personal Perspective](https://stevenkhwun.github.io/Test/Books/Mathematics/solving-mathematical-problems-terence-tao.pdf), PDF version, by _Terence Tao_. (2nd Edition, 2006)
 
+  Personal website of the author can be found at https://terrytao.wordpress.com/.
+
+
 
 
 ## Python
 
+* [Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter](https://wesmckinney.com/book/), Web version, by _Wes McKinney_. (3rd Edition, September 2022)
+
 * [Python for Excel: A Modern Environment for Automation and Data Analysis](https://stevenkhwun.github.io/Test/Books/Python/Python-for-Excel.pdf), PDF version, by _Felix Zumstein_. (1st Edition, March 2021)
   
   The GitHub site of the book can be found [here](https://github.com/fzumstein/python-for-excel).
+  
+
+## R
+
+* [R for Data Science: Import, Tidy, Transform, Visualize, and Model Data](https://r4ds.hadley.nz/), Web version, by _Hadley Wickham, Mine Cetinkaya-Rundel, and Garrett Grolemund_. (2nd Edition, July 2023)
+
+* [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/), Web version, by _Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton_. (3rd Edition (in progress), July 2024)
+
+  The 2nd edition of the book can be found [here](https://mdsr-book.github.io/mdsr2e/).
