@@ -11,7 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Applied Statistics
 
-* [Applied Statistics with Python Volume I: Introductory Statistics and Regression](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Applied-Statistics-with-Python_Kaganovskiy.pdf), PDF version, by _Leon Kaganovskiy_. (1st Edition, 2025)
+* [Applied Statistics with Python Volume I: Introductory Statistics and Regression](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Kaganovskiy_Applied-Statistics-with-Python.pdf), PDF version, by _Leon Kaganovskiy_. (1st Edition, 2025)
+
+* [Applied Univariate, Bivariate, and Multivariate Statistics Using Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Denis_Applied-Statistics-Using-Python.pdf), PDF version, by _Deniel J. Denis_. (2021)
+
 
 ## Machine Learning
 
