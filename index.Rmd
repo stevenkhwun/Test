@@ -15,6 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Applied Univariate, Bivariate, and Multivariate Statistics Using Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Denis_Applied-Statistics-Using-Python.pdf), PDF version, by _Deniel J. Denis_. (2021)
 
+* [Modern Statistics with R: From wrangling and exploring data to inference and predictive modelling](https://www.modernstatisticswithr.com/), Web Version, by _Måns Thulin_. (2nd Edition, March 2025)
+
 
 ## Machine Learning
 
