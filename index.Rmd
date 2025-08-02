@@ -13,7 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Applied Statistics with Python Volume I: Introductory Statistics and Regression](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Kaganovskiy_Applied-Statistics-with-Python.pdf), PDF version, by _Leon Kaganovskiy_. (1st Edition, 2025)
 
-* [Applied Univariate, Bivariate, and Multivariate Statistics Using Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Denis_Applied-Statistics-Using-Python.pdf), PDF version, by _Deniel J. Denis_. (2021)
+* [Applied Univariate, Bivariate, and Multivariate Statistics Using Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Denis_Applied-Statistics-Using-Python.pdf), PDF version, by _Daniel J. Denis_. (2021)
+
+* [Applied Univariate, Bivariate, and Multivariate Statistics: Understanding Statistics for Social and Natural Scientists, with Applications in SPSS and R](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Denis_Applied-Statistics-with-Applications-in-SPSS-and-R.pdf), PDF version, by _Daniel J. Denis_. (2nd Edition, 2021)
+
 
 * [Modern Statistics with R: From wrangling and exploring data to inference and predictive modelling](https://www.modernstatisticswithr.com/), Web Version, by _Måns Thulin_. (2nd Edition, March 2025)
 
@@ -22,12 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 * [An Introduction to Statistical Learning with Applications in Python](https://stevenkhwun.github.io/Test/Books/Machine_Learning/ISLP_website-compressed.pdf), PDF version, by _Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani and Jonathan Taylor_. Printed on 5 July 2023.
-* Another Book
 
-  Written by
-  
-  Dated some date
-* Third book
   
 ## Mathematics
 
