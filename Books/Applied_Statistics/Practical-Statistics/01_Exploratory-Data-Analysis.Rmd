@@ -53,6 +53,20 @@ weightedMedian(state[["Murder.Rate"]], w=state[["Population"]])
 ```
 
 
+## Estimates of Variability
+
+### Key Terms for Variability Metrics
+
+* Deviations (errors, residuals): The difference between the observed values and the estimate of location.
+* Variance (mean-squared-error): The sum of squared deviations from the mean divided by $n-1$ where $n$ is the number of data values.
+* Standard deviation: The square root of the variance.
+* Mean absolute deviation (l1-norm, Manhattan norm): The mean of the absolute values of the deviations from the mean.
+* Median absolute deviation from the median (MAD): The median of the absolute values of the deviations from the median.
+* Range: The difference between the largest and the smallest value in a data set.
+* Order statistics (ranks): Metrics based on the data values sorted from smallest to biggest.
+* Percentile (quantile): The value such that $P$ percent of the values take on this value or less and $(100-P)$ percent take on this value or more.
+* Interquartile range (IQR): The difference between 75th percentile and the 25th percentile.
+
 ```{r}
 # Access the data from my Dell Laptop
 data_path <- "C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics"

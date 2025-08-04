@@ -410,6 +410,32 @@ weighted median, We need to install a package such as
 <pre class="r"><code>library(&quot;matrixStats&quot;)
 weightedMedian(state[[&quot;Murder.Rate&quot;]], w=state[[&quot;Population&quot;]])</code></pre>
 <pre><code>## [1] 4.4</code></pre>
+</div>
+</div>
+<div id="estimates-of-variability" class="section level2">
+<h2>Estimates of Variability</h2>
+<div id="key-terms-for-variability-metrics" class="section level3">
+<h3>Key Terms for Variability Metrics</h3>
+<ul>
+<li>Deviations (errors, residuals): The difference between the observed
+values and the estimate of location.</li>
+<li>Variance (mean-squared-error): The sum of squared deviations from
+the mean divided by <span class="math inline">\(n-1\)</span> where <span class="math inline">\(n\)</span> is the number of data values.</li>
+<li>Standard deviation: The square root of the variance.</li>
+<li>Mean absolute deviation (l1-norm, Manhattan norm): The mean of the
+absolute values of the deviations from the mean.</li>
+<li>Median absolute deviation from the median (MAD): The median of the
+absolute values of the deviations from the median.</li>
+<li>Range: The difference between the largest and the smallest value in
+a data set.</li>
+<li>Order statistics (ranks): Metrics based on the data values sorted
+from smallest to biggest.</li>
+<li>Percentile (quantile): The value such that <span class="math inline">\(P\)</span> percent of the values take on this
+value or less and <span class="math inline">\((100-P)\)</span> percent
+take on this value or more.</li>
+<li>Interquartile range (IQR): The difference between 75th percentile
+and the 25th percentile.</li>
+</ul>
 <pre class="r"><code># Access the data from my Dell Laptop
 data_path &lt;- &quot;C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics&quot;
 sp500_px &lt;- read.csv(file.path(data_path, &quot;sp500_data.csv.gz&quot;), row.names = 1)
