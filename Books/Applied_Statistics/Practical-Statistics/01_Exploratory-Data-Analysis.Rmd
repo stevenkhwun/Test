@@ -1,0 +1,53 @@
+---
+title: "Exploratory Data Analysis"
+author: "SW"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Estimates of Location
+
+### The data
+
+
+```{r}
+# Get the data
+csv <- "https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/state.csv"
+state <- read.csv(csv)
+# View the dataset
+dim(state)
+head(state, n = 5)
+summary(state)
+```
+
+### Mean, trimmed mean, and median
+
+Compute the mean, trimmed mean, and median for the population using _R_:
+
+```{r}
+# Mean
+mean(state[["Population"]])
+# Trimmed mean
+mean(state[["Population"]], trim = 0.1)
+# Median
+median(state[["Population"]])
+```
+
+### Weighted mean and weighted median
+
+```{r}
+# Weighted mean
+weighted.mean(state[["Murder.Rate"]], w=state[["Population"]])
+```
+
+> Notes on R:<br>
+  Since base _R_ doesn't have a function for weighted median, We need to install a package such as `matrixStats`.
+
+```{r}
+library("matrixStats")
+weightedMedian(state[["Murder.Rate"]], w=state[["Population"]])
+```
