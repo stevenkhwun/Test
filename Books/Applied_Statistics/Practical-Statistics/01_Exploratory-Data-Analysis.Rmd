@@ -156,6 +156,16 @@ Note that a bar chart resembles a histogram; in a bar chart the x-axis represent
 
 ## Correlation
 
+### Key Terms for Correlation
+
+* Correlation coefficient: A metric that measures the extent to which numeric variables are associated with one another (ranges from -1 to +1)
+* Correlation matrix: A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.
+* Scatterplot: A plot in which the x-axis is the value of one variable, and the y-axis the value of another.
+
+### The data
+
+__`sp500_px`__ data
+
 ```{r}
 # Access the data from my Dell Laptop
 data_path <- "C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics"
@@ -163,8 +173,7 @@ sp500_px <- read.csv(file.path(data_path, "sp500_data.csv.gz"), row.names = 1)
 dim(sp500_px)
 ```
 
-
-
+__`sp500_sym`__ data
 
 ```{r}
 # Access the data from GitHub
@@ -173,19 +182,43 @@ sp500_sym <- read.csv(csv, stringsAsFactors = FALSE)
 dim(sp500_sym)
 ```
 
+### Correlation matrix
 
 ```{r}
-etfs <- sp500_px[row.names(sp500_px) > '2012-07-01',
-                 sp500_sym[sp500_sym$sector == 'etf', 'symbol']]
-library(corrplot)
-corrplot(cor(etfs), method = 'ellipse')
-```
-
-```{r}
+# Telecommunication stocks data
 telecom <- sp500_px[, sp500_sym[sp500_sym$sector == 'telecommunications_services', 'symbol']]
-dim(telecom)
 head(telecom, n = 5)
+# Create the correlation matrix
 telecom <- telecom[row.names(telecom) > '2012-07-01',]
 telecom_cor <- cor(telecom)
 telecom_cor
 ```
+
+> Notes on _R_:<br>
+  In _R_, we can easily create a table of correlations using the package `corrplot`.
+
+
+```{r message=FALSE}
+# Load the library
+library(corrplot)
+```
+
+The following gigure shows the correlation between the daily returns for major exchange-traded funds (ETFs).
+
+```{r}
+# Create the data
+etfs <- sp500_px[row.names(sp500_px) > '2012-07-01',
+                 sp500_sym[sp500_sym$sector == 'etf', 'symbol']]
+# Create the plot
+corrplot(cor(etfs), method = 'ellipse')
+```
+
+### Scatterplots
+
+The standard way to visualize the relationship between two measured data variables is with a scatterplot. The x-axis represents one variable and the y-axis another, and each point on the graph is a record.
+
+```{r}
+# Scatterplot
+plot(telecom$T, telecom$VZ, xlab = "ATT (T)", ylab = "Verizon (VZ)")
+```
+
