@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Applied Statistics
 
+* [Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Practical-Statistics/PracticalStatisticsforDataScientists.pdf), PDF version, by _Peter Bruce, Andrew Bruce, and Peter Gedeck_. (2nd Edition, 2020)
+
 * [Applied Statistics with Python Volume I: Introductory Statistics and Regression](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Kaganovskiy_Applied-Statistics-with-Python.pdf), PDF version, by _Leon Kaganovskiy_. (1st Edition, 2025)
 
 * [Applied Univariate, Bivariate, and Multivariate Statistics Using Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Denis_Applied-Statistics-Using-Python.pdf), PDF version, by _Daniel J. Denis_. (2021)
