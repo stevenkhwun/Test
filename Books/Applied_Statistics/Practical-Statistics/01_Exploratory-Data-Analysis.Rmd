@@ -135,8 +135,26 @@ lines(density(state[["Murder.Rate"]]), lwd = 3, col = "blue")
 
 ## Exploring Binary and Categorical Data
 
+### The data
 
+```{r}
+# Get the data
+csv <- "https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/dfw_airline.csv"
+dfw <- read.csv(csv)
+dfw
+```
 
+### Bar Chart
+
+```{r}
+# Bar chart
+barplot(as.matrix(dfw) / 6, cex.axis = 0.8, cex.names = 0.7,
+        xlab = "Cause of delay", ylab = "Count")
+```
+
+Note that a bar chart resembles a histogram; in a bar chart the x-axis represents different categories of a factor variable, while in a histogram the x-axis represents values of a single variable on a numeric scale. In a histogram, the bars are typically shown touching each other, with gaps indicating values that did not occur in the data. In a bar chart, the bars are shown separae from one another.
+
+## Correlation
 
 ```{r}
 # Access the data from my Dell Laptop
@@ -144,6 +162,9 @@ data_path <- "C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics"
 sp500_px <- read.csv(file.path(data_path, "sp500_data.csv.gz"), row.names = 1)
 dim(sp500_px)
 ```
+
+
+
 
 ```{r}
 # Access the data from GitHub
