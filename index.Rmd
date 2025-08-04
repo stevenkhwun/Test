@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Applied Statistics
 
 * [Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Practical-Statistics/PracticalStatisticsforDataScientists.pdf), PDF version, by _Peter Bruce, Andrew Bruce, and Peter Gedeck_. (2nd Edition, 2020)
+  * My Notebooks:
+    * [Chapter 1: Exploratory Data Analysis](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Practical-Statistics/01_Exploratory-Data-Analysis.html)<br><br>
 
 * [Applied Statistics with Python Volume I: Introductory Statistics and Regression](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Kaganovskiy_Applied-Statistics-with-Python.pdf), PDF version, by _Leon Kaganovskiy_. (1st Edition, 2025)
 
@@ -56,8 +58,3 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 * [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/), Web version, by _Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton_. (3rd Edition (in progress), July 2024)<br>
   * The 2nd edition of the book can be found [here](https://mdsr-book.github.io/mdsr2e/).
-  
-
-## Notebooks
-
-[Practical Statistics for Data Scientists](https://stevenkhwun.github.io/Test/Books/Applied_Statistics/Practical-Statistics/01_Exploratory-Data-Analysis.html)
