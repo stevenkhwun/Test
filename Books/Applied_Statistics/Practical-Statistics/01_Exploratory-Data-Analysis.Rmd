@@ -44,7 +44,7 @@ median(state[["Population"]])
 weighted.mean(state[["Murder.Rate"]], w=state[["Population"]])
 ```
 
-> Notes on R:<br>
+> Notes on _R_:<br>
   Since base _R_ doesn't have a function for weighted median, We need to install a package such as `matrixStats`.
 
 ```{r}
@@ -66,6 +66,77 @@ weightedMedian(state[["Murder.Rate"]], w=state[["Population"]])
 * Order statistics (ranks): Metrics based on the data values sorted from smallest to biggest.
 * Percentile (quantile): The value such that $P$ percent of the values take on this value or less and $(100-P)$ percent take on this value or more.
 * Interquartile range (IQR): The difference between 75th percentile and the 25th percentile.
+
+Neither the variance, the standard deviation, nor the mean absolute deviation is robust to outliers and extreme values. The variance and standard deviation are especially sensitive to outliers since they are based on the squared deviations. A robust estimate of variability is the _median absolute deviation from the median_ or __MAD__.
+
+### Using _R_'s built-in functions for the standard deviation, the interquartile range (IQR), and the median absolute deviation from the median (MAD)
+
+```{r}
+# Standard deviation
+sd(state[["Population"]])
+# Interquartile range
+IQR(state[["Population"]])
+# Median absolute deviation from the median
+mad(state[["Population"]])
+```
+
+The standard deviation is almost twice as large as the __MAD__. This is not surprising since the standard deviation is sensitive to outliers.
+
+
+## Exploring the Data Distribution
+
+### Key Terms for Exploring the Distribution
+
+* Boxplot (box and whiskers plot): A plot introduced by Tukey as a quick way to visualize the distribution of data.
+* Frequency table: A tally of the count of numeric data values that fall into a set of intervals (bins).
+* Histogram: A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the y-axis.
+* Density plot: A smoothed version of the histogram, often based on a _kernel density estimate_.
+
+### Percentiles and Boxplots
+
+```{r}
+# Percentiles
+quantile(state[["Murder.Rate"]], p = c(.05, .25, .5, .75, .95))
+# Boxplot
+boxplot(state[["Population"]]/1000000, ylab = "Population (millions)")
+```
+
+### Frequency Tables and Histograms
+
+```{r}
+# Frequency table
+breaks <- seq(from = min(state[["Population"]]),
+              to = max(state[["Population"]]), length = 11)
+pop_freq <- cut(state[["Population"]], breaks = breaks,
+                right = TRUE, include.lowest = TRUE)
+table(pop_freq)
+# Histogram
+options(scipen = 5)
+hist(state[["Population"]], breaks = breaks, main = "Histogram of state population",
+     xlab = "Population")
+```
+
+> Notes on _R_:<br>
+  The option `options(scipen = 5)` determines how likely _R_ is to switch to scientific notation in the plot. The higher the number, the less likely _R_ will switch to scientific notation.
+
+### Statistical Moments
+
+In statistical theory, location and variability are referred to as the first and second _moments_ of a distribution. The third and fouth moments are called _skewness_ and _kurtosis_. __Skewness__ refers to whether the data is skewed to larger or smaller values, and __kurtosis__ indicates the propensity of the data to have extreme values. Generally, metrics are not used to measure skewness and kurtosis; instead, these are discovered through visual displays.
+
+### Density Plots and Estimates
+
+Related to the histogram is a density plot, which shows the distribution of data values as a continuous line. A density plot can be thought of as a smoothed histogram, although it is typically computed directly from the data through a _kernel density estimate_. In _R_, you can compute a density estimate using the `density` function:
+
+```{r}
+hist(state[["Murder.Rate"]], freq = FALSE, main = "State Murder Rate",
+          xlab = "Murder rate (murders per 100,000 people)")
+lines(density(state[["Murder.Rate"]]), lwd = 3, col = "blue")
+```
+
+## Exploring Binary and Categorical Data
+
+
+
 
 ```{r}
 # Access the data from my Dell Laptop
