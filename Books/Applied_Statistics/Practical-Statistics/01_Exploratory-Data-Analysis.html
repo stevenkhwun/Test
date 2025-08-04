@@ -410,6 +410,13 @@ weighted median, We need to install a package such as
 <pre class="r"><code>library(&quot;matrixStats&quot;)
 weightedMedian(state[[&quot;Murder.Rate&quot;]], w=state[[&quot;Population&quot;]])</code></pre>
 <pre><code>## [1] 4.4</code></pre>
+<pre class="r"><code># Access the data from my Dell Laptop
+data_path &lt;- &quot;C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics&quot;
+sp500_px &lt;- read.csv(file.path(data_path, &quot;sp500_data.csv.gz&quot;), row.names = 1)
+dim(sp500_px)</code></pre>
+<pre><code>## [1] 5647  517</code></pre>
+<pre class="r"><code>getwd()</code></pre>
+<pre><code>## [1] &quot;C:/Users/steve/GitHub/Test/Books/Applied_Statistics/Practical-Statistics&quot;</code></pre>
 </div>
 </div>
 

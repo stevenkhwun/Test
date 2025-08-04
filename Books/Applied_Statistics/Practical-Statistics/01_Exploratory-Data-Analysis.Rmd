@@ -53,3 +53,14 @@ weightedMedian(state[["Murder.Rate"]], w=state[["Population"]])
 ```
 
 
+```{r}
+# Access the data from my Dell Laptop
+data_path <- "C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics"
+sp500_px <- read.csv(file.path(data_path, "sp500_data.csv.gz"), row.names = 1)
+dim(sp500_px)
+```
+
+```{r}
+etfs <- sp500_px[row.names(sp500_px) > '2012-07-01',
+                 sp500_sym]
+```
