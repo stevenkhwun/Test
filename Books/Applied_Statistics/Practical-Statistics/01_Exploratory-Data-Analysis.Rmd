@@ -17,9 +17,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Estimates of Location
+# Estimates of Location
 
-### The data
+## The data
 
 
 ```{r}
@@ -32,25 +32,72 @@ head(state, n = 5)
 summary(state)
 ```
 
-### Mean, trimmed mean, and median
+## Mean, trimmed mean, and median
 
-Compute the mean, trimmed mean, and median for the population using _R_:
+### Mean (average)
+The sum of all values divided by the number of values.
 
 ```{r}
 # Mean
 mean(state[["Population"]])
+```
+
+### Trimmed mean (truncated mean)
+The average of all values after dropping a fixed number of extreme values. It is calculated by dropping a fixed number of sorted values at each end and then taking an average of the remaining values.
+
+A trimmed mean eliminates the influence of extreme values.
+
+```{r}
 # Trimmed mean
+# 'trim=0.1' drops 10% from each end
 mean(state[["Population"]], trim = 0.1)
+```
+
+A further example for trimmed mean:
+```{r}
+# Data with all the middle values equal to 4
+skewdata <- c(1,4,4,4,4,4,4,4,4,1000)
+```
+
+```{r}
+# The mean is influenced by the outlier 1000
+mean(skewdata)
+# The trimmed mean is calculated by dropping the first and last observation
+mean(skewdata, trim=0.1)
+```
+
+### Median (50th percentile)
+The value such that one-half of the data lies above and below.
+
+Compared to the mean, which uses all observations, the median depends only on the values in the center of the sorted data. While this might seem to be a disadvantage, since the mean is much more sensitive to the data, there are many instances in which the median is a better metric for location.
+
+
+```{r}
 # Median
 median(state[["Population"]])
 ```
 
-### Weighted mean and weighted median
+## Weighted mean and weighted median
+
+### Weighted mean (weighted average)
+The sum of all values times a weight divided by the sum of the weights.
+
+There are two main motivations for using a weighted mean:
+
+*   Some values are intrinsically more variable than others, and highly variable observations are given a lower weight.
+*   The data collected does not equally represent the different group that we are interested in mearsuring.
+
+If we want to compute the average murder rate for the country, we need to use a weighted mean or median to account for different populations in the states.
+
 
 ```{r}
 # Weighted mean
 weighted.mean(state[["Murder.Rate"]], w=state[["Population"]])
 ```
+
+### Weighted median
+The value such that one-half of the sum of the weights lies above and below the sorted data.
+
 
 > Notes on _R_:<br>
   Since base _R_ doesn't have a function for weighted median, We need to install a package such as `matrixStats`.
@@ -60,10 +107,16 @@ library("matrixStats")
 weightedMedian(state[["Murder.Rate"]], w=state[["Population"]])
 ```
 
+## Outliers
+The median is referred to as a robust estimate of location since it is not influenced by outliers (extreme cases) that could skew the results. An outlier is any value that is very distant from the other values in a data set. Being an outlier in itself does not make a data value invalid or erroneous. When outliers are the result of bad data, the mean will result in a poor estimate of location, while the median will still be valid.
 
-## Estimates of Variability
+The median is not the only robust estimate of location. In fact, a trimmed mean is widely used to avoid the influence of outliers. The trimmed mean can be thought of as a compromise between the median and the mean: it is robust to extreme values in the data, but uses more data to calculate the estimate for location.
 
-### Key Terms for Variability Metrics
+_Robust_, or resistant, means not sensitive to extreme values.
+
+# Estimates of Variability
+
+## Key Terms for Variability Metrics
 
 * Deviations (errors, residuals): The difference between the observed values and the estimate of location.
 * Variance (mean-squared-error): The sum of squared deviations from the mean divided by $n-1$ where $n$ is the number of data values.
@@ -77,7 +130,7 @@ weightedMedian(state[["Murder.Rate"]], w=state[["Population"]])
 
 Neither the variance, the standard deviation, nor the mean absolute deviation is robust to outliers and extreme values. The variance and standard deviation are especially sensitive to outliers since they are based on the squared deviations. A robust estimate of variability is the _median absolute deviation from the median_ or __MAD__.
 
-### Using _R_'s built-in functions for the standard deviation, the interquartile range (IQR), and the median absolute deviation from the median (MAD)
+## Using _R_'s built-in functions for the standard deviation, the interquartile range (IQR), and the median absolute deviation from the median (MAD)
 
 ```{r}
 # Standard deviation
@@ -91,16 +144,16 @@ mad(state[["Population"]])
 The standard deviation is almost twice as large as the __MAD__. This is not surprising since the standard deviation is sensitive to outliers.
 
 
-## Exploring the Data Distribution
+# Exploring the Data Distribution
 
-### Key Terms for Exploring the Distribution
+## Key Terms for Exploring the Distribution
 
 * Boxplot (box and whiskers plot): A plot introduced by Tukey as a quick way to visualize the distribution of data.
 * Frequency table: A tally of the count of numeric data values that fall into a set of intervals (bins).
 * Histogram: A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the y-axis.
 * Density plot: A smoothed version of the histogram, often based on a _kernel density estimate_.
 
-### Percentiles and Boxplots
+## Percentiles and Boxplots
 
 ```{r}
 # Percentiles
@@ -109,7 +162,7 @@ quantile(state[["Murder.Rate"]], p = c(.05, .25, .5, .75, .95))
 boxplot(state[["Population"]]/1000000, ylab = "Population (millions)")
 ```
 
-### Frequency Tables and Histograms
+## Frequency Tables and Histograms
 
 ```{r}
 # Frequency table
@@ -127,11 +180,11 @@ hist(state[["Population"]], breaks = breaks, main = "Histogram of state populati
 > Notes on _R_:<br>
   The option `options(scipen = 5)` determines how likely _R_ is to switch to scientific notation in the plot. The higher the number, the less likely _R_ will switch to scientific notation.
 
-### Statistical Moments
+## Statistical Moments
 
 In statistical theory, location and variability are referred to as the first and second _moments_ of a distribution. The third and fouth moments are called _skewness_ and _kurtosis_. __Skewness__ refers to whether the data is skewed to larger or smaller values, and __kurtosis__ indicates the propensity of the data to have extreme values. Generally, metrics are not used to measure skewness and kurtosis; instead, these are discovered through visual displays.
 
-### Density Plots and Estimates
+## Density Plots and Estimates
 
 Related to the histogram is a density plot, which shows the distribution of data values as a continuous line. A density plot can be thought of as a smoothed histogram, although it is typically computed directly from the data through a _kernel density estimate_. In _R_, you can compute a density estimate using the `density` function:
 
@@ -141,9 +194,9 @@ hist(state[["Murder.Rate"]], freq = FALSE, main = "State Murder Rate",
 lines(density(state[["Murder.Rate"]]), lwd = 3, col = "blue")
 ```
 
-## Exploring Binary and Categorical Data
+# Exploring Binary and Categorical Data
 
-### The data
+## The data
 
 ```{r}
 # Get the data
@@ -152,7 +205,7 @@ dfw <- read.csv(csv)
 dfw
 ```
 
-### Bar Chart
+## Bar Chart
 
 ```{r}
 # Bar chart
@@ -162,15 +215,15 @@ barplot(as.matrix(dfw) / 6, cex.axis = 0.8, cex.names = 0.7,
 
 Note that a bar chart resembles a histogram; in a bar chart the x-axis represents different categories of a factor variable, while in a histogram the x-axis represents values of a single variable on a numeric scale. In a histogram, the bars are typically shown touching each other, with gaps indicating values that did not occur in the data. In a bar chart, the bars are shown separae from one another.
 
-## Correlation
+# Correlation
 
-### Key Terms for Correlation
+## Key Terms for Correlation
 
 * Correlation coefficient: A metric that measures the extent to which numeric variables are associated with one another (ranges from -1 to +1)
 * Correlation matrix: A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.
 * Scatterplot: A plot in which the x-axis is the value of one variable, and the y-axis the value of another.
 
-### The data
+## The data
 
 __`sp500_px`__ data
 
@@ -190,7 +243,7 @@ sp500_sym <- read.csv(csv, stringsAsFactors = FALSE)
 dim(sp500_sym)
 ```
 
-### Correlation matrix
+## Correlation matrix
 
 ```{r}
 # Telecommunication stocks data
@@ -221,7 +274,7 @@ etfs <- sp500_px[row.names(sp500_px) > '2012-07-01',
 corrplot(cor(etfs), method = 'ellipse')
 ```
 
-### Scatterplots
+## Scatterplots
 
 The standard way to visualize the relationship between two measured data variables is with a scatterplot. The x-axis represents one variable and the y-axis another, and each point on the graph is a record.
 

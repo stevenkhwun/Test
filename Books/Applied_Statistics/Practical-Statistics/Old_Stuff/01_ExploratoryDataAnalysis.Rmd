@@ -11,30 +11,6 @@ date: '2023-03-04'
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Some notes about R Markdown
-
-The following code is added to the YAML header for setting up automated section numbering:
-```{r, eval=FALSE}
-output:
-  html_document:
-    number_sections: TRUE
-```
-
-
-The following code chunk should be included at the top of all R Markdown document: 
-```{r, eval=FALSE}
-{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-There are options in writing code chunks and the following is a brief description of some useful options.
-
-
-*   `include =`: `inclue = FALSE` prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.
-*   `echo =`: `echo = TRUE` shows the code, where `echo = FALSE` prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures (see the boxplot below).
-*   `eval =`: `eval = TRUE` means to evaluate (run) the code, where `eval = FALSE` will just show the code but not evalutate it.
-
-
 # Estimates of Location
 
 The dataset `state.csv` is used to demonstrate the calculation of the various estimates of location.
@@ -58,86 +34,13 @@ The boxplot of the variable `Population` is displayed below:
 boxplot(state[['Population']])
 ```
 
-## Mean (average)
-The sum of all values divided by the number of values.
-```{r}
-# Mean
-mean(state[['Population']])
-```
-
-## Trimmed mean (truncated mean)
-The average of all values after dropping a fixed number of extreme values. It is calculated by dropping a fixed number of sorted values at each end and then taking an average of the remaining values.
-
-A trimmed mean eliminates the influence of extreme values.
-
-```{r}
-# Trimmed mean
-# 'trim=0.1' drops 10% from each end
-mean(state[['Population']], trim=0.1)
-```
-
-A further example for trimmed mean:
-```{r}
-# Data with all the middle values equal to 4
-skewdata <- c(1,4,4,4,4,4,4,4,4,1000)
-```
-
-```{r}
-# The mean is influenced by the outlier 1000
-mean(skewdata)
-# The trimmed mean is calculated by dropping the first and last observation
-mean(skewdata, trim=0.1)
-
-```
-
-## Median (50th percentile)
-The value such that one-half of the data lies above and below.
-
-Compared to the mean, which uses all observations, the median depends only on the values in the center of the sorted data. While this might seem to be a disadvantage, since the mean is much more sensitive to the data, there are many instances in which the median is a better metric for location.
-
-```{r}
-# Median
-median(state[['Population']])
-```
-
-## Weighted mean (weighted average)
-The sum of all values times a weight divided by the sum of the weights.
-
-There are two main motivations for using a weighted mean:
-
-*   Some values are intrinsically more variable than others, and highly variable observations are given a lower weight.
-*   The data collected does not equally represent the different group that we are interested in mearsuring.
-
-If we want to compute the average murder rate for the country, we need to use a weighted mean or median to account for different populations in the states.
-
-```{r}
-# Weighted mean
-weighted.mean(state[['Murder.Rate']], w=state[['Population']])
-```
-
-## Weighted median
-The value such that one-half of the sum of the weights lies above and below the sorted data.
-
-Since base *R* doesn't have a function for weighted median, we need to install a package such as `matrixStats`:
-
-```{r}
-# Weighted median
-library('matrixStats')
-weightedMedian(state[['Murder.Rate']], w=state[['Population']])
-```
 
 
 ## Percentile (quantile)
 The value such that *P* percent of the data lies below.
 
 
-## Outliers
-The median is referred to as a robust estimate of location since it is not influenced by outliers (extreme cases) that could skew the results. An outlier is any value that is very distant from the other values in a data set. Being an outlier in itself does not make a data value invalid or erroneous. When outliers are the result of bad data, the mean will result in a poor estimate of location, while the median will still be valid.
 
-The median is not the only robust estimate of location. In fact, a trimmed mean is widely used to avoid the influence of outliers. The trimmed mean can be thought of as a compromise between the median and the mean: it is robust to extreme values in the data, but uses more data to calculate the estimate for location.
-
-## Robust (resistant)
-Not sensitive to extreme values.
 
 # Estimates of variability
 
