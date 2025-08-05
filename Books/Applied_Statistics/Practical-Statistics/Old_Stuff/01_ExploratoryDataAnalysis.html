@@ -388,7 +388,8 @@ Location</h1>
 <p>The dataset <code>state.csv</code> is used to demonstrate the
 calculation of the various estimates of location.</p>
 <pre class="r"><code># Import the dataset
-state &lt;- read.csv(&#39;Data/state.csv&#39;)</code></pre>
+csv &lt;- &quot;https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/state.csv&quot;
+state &lt;- read.csv(csv)</code></pre>
 <pre class="r"><code># First few observations
 head(state)</code></pre>
 <pre><code>##        State Population Murder.Rate Abbreviation

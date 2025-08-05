@@ -41,7 +41,8 @@ The dataset `state.csv` is used to demonstrate the calculation of the various es
 
 ```{r}
 # Import the dataset
-state <- read.csv('Data/state.csv')
+csv <- "https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/state.csv"
+state <- read.csv(csv)
 ```
 
 ```{r}
