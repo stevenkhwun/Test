@@ -3,8 +3,14 @@ title: "Exploratory Data Analysis"
 author: "SW"
 date: "`r Sys.Date()`"
 output:
+  html_document:
+    toc: true # table of content true
+    toc_float: true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    theme: cerulean  # many options for theme, this one is my favorite.
+    highlight: tango  # specifies the syntax highlighting style
   pdf_document: default
-  html_document: default
 ---
 
 ```{r setup, include=FALSE}
