@@ -283,3 +283,62 @@ The standard way to visualize the relationship between two measured data variabl
 plot(telecom$T, telecom$VZ, xlab = "ATT (T)", ylab = "Verizon (VZ)")
 ```
 
+# Exploring Two or More Variables
+
+## Hexagonal Binning and Contours (Plotting Numeric Versus Numeric Data)
+
+Scatterplots are fine when there is a relatively small number of data values. For data sets with hundreds of thousands or millions of records, a scatterplot will be too dense, so we need a different way to visualize the relationship.
+
+
+__The `kc_tax` data__
+
+
+```{r}
+# Access the data from my Dell Laptop
+data_path <- "C:/Users/steve/GitHub/Online-resources/Data/Practical-Statistics"
+kc_tax <- read.csv(file.path(data_path, "kc_tax.csv.gz"))
+head(kc_tax, n =5)
+```
+
+In order to focus on the main part of the data, we strip out very expensive and very small or large residences uisng the `subset` function:
+
+```{r}
+# Subset the data
+kc_tax0 <- subset(kc_tax, TaxAssessedValue < 750000 &
+                    SqFtTotLiving > 100 &
+                    SqFtTotLiving < 3500)
+nrow(kc_tax0)
+```
+
+### Hexagonal binning
+
+The following figure is a _hexagonal binning_ plot of the relationship between the finished square feet and the tax-assessed value for homes. Rather than plotting points, which would appear as amonolithic dark cloud, we grouped the records into hexagonal bins nd plotted the hexagons with a color indicating the number of records in that bin. In this chart, the positive relationship between square feet and tax-assessed value is clear. An interesting feature is the hint of additional bands above te main (darkest) band at the bottom, indicating homes that have the same square footage as those in the main band but a higher tax-assessed value.
+
+```{r}
+# Hexagonal binning plot
+library(ggplot2)
+ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
+  stat_binhex(color="white") +
+  theme_bw() +
+  scale_fill_gradient(low="white", high="purple") +
+  labs(x="Finished Square Feet", y="Tax-Assessed Value")
+```
+
+```{r eval=FALSE}
+ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
+  theme_bw() +
+  geom_point(color="blue", alpha=0.1) +
+  geom_density2d(color="white") +
+  scale_y_continuous(labels = function(x) format(x, scientific=FALSE)) +
+  labs(x="Finished Square Feet", y="Tax-Assessed Value")
+```
+
+```{r}
+ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
+  theme_bw() +
+  geom_point(color="blue", alpha=0.1) +
+  geom_density2d(color="white") +
+  labs(x="Finished Square Feet", y="Tax-Assessed Value")
+```
+
+
