@@ -2010,6 +2010,53 @@ function.</p>
 <span id="cb55-7"><a href="#cb55-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Finished Square Feet&quot;</span>, <span class="at">y=</span><span class="st">&quot;Tax-Assessed Value&quot;</span>)</span></code></pre></div>
 </div>
 </div>
+<div id="two-categorical-variables" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Two Categorical
+Variables</h2>
+<p><strong>The <code>lc_loans</code> data</strong></p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="co"># Access the data from GitHub</span></span>
+<span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>csv <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/lc_loans.csv&quot;</span></span>
+<span id="cb56-3"><a href="#cb56-3" tabindex="-1"></a>lc_loans <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(csv)</span>
+<span id="cb56-4"><a href="#cb56-4" tabindex="-1"></a><span class="fu">head</span>(lc_loans, <span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="fu">library</span>(descr)</span>
+<span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;C:/Users/steve/GitHub/Test/Books/Applied_Statistics/Practical-Statistics/lc_loans.RData&quot;</span>)</span>
+<span id="cb57-3"><a href="#cb57-3" tabindex="-1"></a>x_tab <span class="ot">&lt;-</span> <span class="fu">CrossTable</span>(lc_loans<span class="sc">$</span>grade, lc_loans<span class="sc">$</span>status,</span>
+<span id="cb57-4"><a href="#cb57-4" tabindex="-1"></a>                    <span class="at">prop.c =</span> <span class="cn">FALSE</span>, <span class="at">prop.chisq =</span> <span class="cn">FALSE</span>, <span class="at">prop.t =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb57-5"><a href="#cb57-5" tabindex="-1"></a>x_tab</span></code></pre></div>
+<pre><code>##    Cell Contents 
+## |-------------------------|
+## |                       N | 
+## |           N / Row Total | 
+## |-------------------------|
+## 
+## ======================================================================
+##                   lc_loans$status
+## lc_loans$grade    Charged Off   Current   Fully Paid     Late    Total
+## ----------------------------------------------------------------------
+## A                        1562     50051        20408      469    72490
+##                         0.022     0.690        0.282    0.006    0.161
+## ----------------------------------------------------------------------
+## B                        5302     93852        31160     2056   132370
+##                         0.040     0.709        0.235    0.016    0.294
+## ----------------------------------------------------------------------
+## C                        6023     88928        23147     2777   120875
+##                         0.050     0.736        0.191    0.023    0.268
+## ----------------------------------------------------------------------
+## D                        5007     53281        13681     2308    74277
+##                         0.067     0.717        0.184    0.031    0.165
+## ----------------------------------------------------------------------
+## E                        2842     24639         5949     1374    34804
+##                         0.082     0.708        0.171    0.039    0.077
+## ----------------------------------------------------------------------
+## F                        1526      8444         2328      606    12904
+##                         0.118     0.654        0.180    0.047    0.029
+## ----------------------------------------------------------------------
+## G                         409      1990          643      199     3241
+##                         0.126     0.614        0.198    0.061    0.007
+## ----------------------------------------------------------------------
+## Total                   22671    321185        97316     9789   450961
+## ======================================================================</code></pre>
+</div>
 </div>
 
 
