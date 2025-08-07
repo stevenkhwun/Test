@@ -360,7 +360,7 @@ ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
 
 __The `lc_loans` data__
 
-```{r eval=FALSE}
+```{r}
 # Access the data from GitHub
 csv <- "https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/lc_loans.csv"
 lc_loans <- read.csv(csv)
@@ -369,7 +369,7 @@ head(lc_loans, n = 5)
 
 ```{r}
 library(descr)
-load("C:/Users/steve/GitHub/Test/Books/Applied_Statistics/Practical-Statistics/lc_loans.RData")
+# load("C:/Users/steve/GitHub/Test/Books/Applied_Statistics/Practical-Statistics/lc_loans.RData")
 x_tab <- CrossTable(lc_loans$grade, lc_loans$status,
                     prop.c = FALSE, prop.chisq = FALSE, prop.t = FALSE)
 x_tab

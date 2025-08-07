@@ -2018,11 +2018,17 @@ Variables</h2>
 <span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>csv <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/lc_loans.csv&quot;</span></span>
 <span id="cb56-3"><a href="#cb56-3" tabindex="-1"></a>lc_loans <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(csv)</span>
 <span id="cb56-4"><a href="#cb56-4" tabindex="-1"></a><span class="fu">head</span>(lc_loans, <span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="fu">library</span>(descr)</span>
-<span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;C:/Users/steve/GitHub/Test/Books/Applied_Statistics/Practical-Statistics/lc_loans.RData&quot;</span>)</span>
-<span id="cb57-3"><a href="#cb57-3" tabindex="-1"></a>x_tab <span class="ot">&lt;-</span> <span class="fu">CrossTable</span>(lc_loans<span class="sc">$</span>grade, lc_loans<span class="sc">$</span>status,</span>
-<span id="cb57-4"><a href="#cb57-4" tabindex="-1"></a>                    <span class="at">prop.c =</span> <span class="cn">FALSE</span>, <span class="at">prop.chisq =</span> <span class="cn">FALSE</span>, <span class="at">prop.t =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb57-5"><a href="#cb57-5" tabindex="-1"></a>x_tab</span></code></pre></div>
+<pre><code>##        status grade
+## 1  Fully Paid     B
+## 2 Charged Off     C
+## 3  Fully Paid     C
+## 4  Fully Paid     C
+## 5     Current     B</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="fu">library</span>(descr)</span>
+<span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a><span class="co"># load(&quot;C:/Users/steve/GitHub/Test/Books/Applied_Statistics/Practical-Statistics/lc_loans.RData&quot;)</span></span>
+<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a>x_tab <span class="ot">&lt;-</span> <span class="fu">CrossTable</span>(lc_loans<span class="sc">$</span>grade, lc_loans<span class="sc">$</span>status,</span>
+<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>                    <span class="at">prop.c =</span> <span class="cn">FALSE</span>, <span class="at">prop.chisq =</span> <span class="cn">FALSE</span>, <span class="at">prop.t =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a>x_tab</span></code></pre></div>
 <pre><code>##    Cell Contents 
 ## |-------------------------|
 ## |                       N | 
