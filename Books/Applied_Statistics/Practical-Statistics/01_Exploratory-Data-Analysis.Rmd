@@ -300,7 +300,10 @@ kc_tax <- read.csv(file.path(data_path, "kc_tax.csv.gz"))
 head(kc_tax, n =5)
 ```
 
-In order to focus on the main part of the data, we strip out very expensive and very small or large residences uisng the `subset` function:
+> Notes on _R_:<br>
+  We use the `subset` function to return subsets of vectors, matrices or data frames which meet conditions.
+
+In order to focus on the main part of the data, we strip out very expensive and very small or large residences using the `subset` function:
 
 ```{r}
 # Subset the data
@@ -314,6 +317,9 @@ nrow(kc_tax0)
 
 The following figure is a _hexagonal binning_ plot of the relationship between the finished square feet and the tax-assessed value for homes. Rather than plotting points, which would appear as amonolithic dark cloud, we grouped the records into hexagonal bins nd plotted the hexagons with a color indicating the number of records in that bin. In this chart, the positive relationship between square feet and tax-assessed value is clear. An interesting feature is the hint of additional bands above te main (darkest) band at the bottom, indicating homes that have the same square footage as those in the main band but a higher tax-assessed value.
 
+> Notes on _R_:<br>
+  We use the `ggplot2` package to create the hexagonal binning plot.
+
 ```{r}
 # Hexagonal binning plot
 library(ggplot2)
@@ -324,6 +330,13 @@ ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
   labs(x="Finished Square Feet", y="Tax-Assessed Value")
 ```
 
+### Contour plot
+
+The following figure uses contours overlaid onto a scatterplot to visualize the relationship between two numeric variables. The contours are essentially a topographical map to two variales; each contour band represents a specific density of points, increasing as one nears a "peak".
+
+> Notes on _R_:<br>
+  This chart was also created using `ggplot2` with the built-in `geom_density2d` function.
+
 ```{r eval=FALSE}
 ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
   theme_bw() +
@@ -333,7 +346,9 @@ ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
   labs(x="Finished Square Feet", y="Tax-Assessed Value")
 ```
 
-```{r}
+```{r eval=FALSE}
+# This code block is not executed
+# It will produce the same plot as the above code block
 ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
   theme_bw() +
   geom_point(color="blue", alpha=0.1) +
@@ -341,4 +356,14 @@ ggplot(kc_tax0, (aes(x=SqFtTotLiving, y=TaxAssessedValue))) +
   labs(x="Finished Square Feet", y="Tax-Assessed Value")
 ```
 
+## Two Categorical Variables
+
+__The `lc_loans` data__
+
+```{r}
+# Access the data from GitHub
+csv <- "https://raw.githubusercontent.com/stevenkhwun/Online-resources/refs/heads/main/Data/Practical-Statistics/lc_loans.csv"
+lc_loans <- read.csv(csv)
+head(lc_loans, n = 5)
+```
 
