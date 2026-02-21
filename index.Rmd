@@ -57,5 +57,12 @@ knitr::opts_chunk$set(echo = TRUE)
   * The solutions to the exercises of the book can be found [here](https://mine-cetinkaya-rundel.github.io/r4ds-solutions/). 
 <br>
 <br>
+* [Introduction to Data Science: Data Wrangling and Visualization with R](https://rafalab.dfci.harvard.edu/dsbook-part-1/), Web version, by _Rafael A. Irizarry_. (2nd Edition)
+<br>
+<br>
+* [Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies](https://rafalab.dfci.harvard.edu/dsbook-part-2/), Web version, by _Rafael A. Irizarry_. (2nd Edition)
+<br>
+<br>
+
 * [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/), Web version, by _Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton_. (3rd Edition (in progress), July 2024)<br>
   * The 2nd edition of the book can be found [here](https://mdsr-book.github.io/mdsr2e/).
