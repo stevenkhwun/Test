@@ -39,7 +39,9 @@ knitr::opts_chunk$set(echo = TRUE)
   Personal website of the author can be found at https://terrytao.wordpress.com/.
 
 
+## Official Statistics
 
+* [Machine Learning for Official Statistics](https://stevenkhwun.github.io/Test/Books/Official_Statistics/ML_for_Official-Statistics.pdf), PDF version, by _United Nations Economic Commission For Europe, United Nations_. (2021)
 
 ## Python
 
