@@ -81,6 +81,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Logistic Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Logistic.ipynb)
 
+* [Cheat Sheet: Linear and Logistic Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Cheat_Sheet_1-Linear-and-Logistic-Regression.pdf)
+
 ## Jupyter Notebook tricks
 
 * [Jupyter Notebook tricks](https://nbviewer.org/github/stevenkhwun/gitABC/blob/main/jpynb_Tricks.ipynb)
