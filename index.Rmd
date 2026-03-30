@@ -85,6 +85,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Multi-class Classification](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Multi-class_Classification.ipynb)
 
+* [Decision Trees](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Decision_trees.ipynb)
+
+
 ## Jupyter Notebook tricks
 
 * [Jupyter Notebook tricks](https://nbviewer.org/github/stevenkhwun/gitABC/blob/main/jpynb_Tricks.ipynb)
