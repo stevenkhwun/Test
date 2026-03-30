@@ -77,7 +77,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Simple Linear Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Simple-Linear-Regression.ipynb)
 
-* [Multiple Linear Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Mulitple-Linear-Regression.ipynb)
+* [Multiple Linear Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/MLR.ipynb)
+
+* [Logistic Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Logistic.ipynb)
 
 ## Jupyter Notebook tricks
 
