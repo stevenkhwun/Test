@@ -75,6 +75,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Jupyter Notebook for Machine Learning using Python
 
+### Linear and Logistic Regression
+
 * [Simple Linear Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Simple-Linear-Regression.ipynb)
 
 * [Multiple Linear Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/MLR.ipynb)
@@ -83,12 +85,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Cheat Sheet: Linear and Logistic Regression](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Cheat_Sheet_1-Linear-and-Logistic-Regression.pdf)
 
+### Supervised Learning Models
+
 * [Multi-class Classification](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Multi-class_Classification.ipynb)
 
-  Alternatively, this [link](https://stevenkhwun.github.io/Test/Multi-class_Classification.html)
+  Alternatively, this [link](https://stevenkhwun.github.io/Test/Multi-class_Classification.html).
   
 
 * [Decision Trees](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Decision_trees.ipynb)
+
+
+* [Regression Trees](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Regression_Trees_Taxi_Tip.ipynb)
+
+
+### Other Supervised Learning Models
+
+* [Decision Tree and Support Vector Machine](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/decision_tree_svm_ccFraud.ipynb)
 
 
 ## Jupyter Notebook tricks
