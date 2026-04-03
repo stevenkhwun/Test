@@ -100,6 +100,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Decision Tree and Support Vector Machine](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/decision_tree_svm_ccFraud.ipynb)
 
+* [K-Nearest Neighbors Classifier](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/KNN_Classification.ipynb)
 
 ## Jupyter Notebook tricks
 
