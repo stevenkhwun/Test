@@ -124,6 +124,17 @@ knitr::opts_chunk$set(echo = TRUE)
 * [**Cheat Sheet: Building Supervised Learning Models**](https://author-ide.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZF9pbnN0cnVjdGlvbnNfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkL05RZmhxbEFLN1Uxb2RnemVNWlI3N2cvTW9kdWxlJTIwMyUyMGNoZWF0JTIwc2hlZXQtVjIubWQ_dD0xNzQ2MTI3NTMxIiwidG9vbF90eXBlIjoiaW5zdHJ1Y3Rpb25hbC1sYWIiLCJhdGxhc19maWxlX2lkIjoyNTI1MDEsImFkbWluIjpmYWxzZSwiaWF0IjoxNzU3Njk3MjI4fQ.-Q0bZWPRJVWw_W8gx3JCUKIvg7ra7ak14aoxUd3UqKo)
 
 
+#### _Unsupervised Learning Models_
+
+* Clustering<br>
+  * [K-means Clustering](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/K-Means-Customer-Seg.ipynb)
+  * [Comparing DBSCAN and HDBSCAN]()
+  
+* Dimension Reduction & Feature Engineering<br>
+  * [Principal Component Analysis]()
+  * [t-SNE and UMAP]()
+  
+
 ## Jupyter Notebook tricks
 
 * [Jupyter Notebook tricks](https://nbviewer.org/github/stevenkhwun/gitABC/blob/main/jpynb_Tricks.ipynb)
