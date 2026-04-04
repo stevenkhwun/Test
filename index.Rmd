@@ -71,7 +71,24 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 * [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/), Web version, by _Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton_. (3rd Edition (in progress), July 2024)<br>
-  * The 2nd edition of the book can be found [here](https://mdsr-book.github.io/mdsr2e/).
+  * The 2nd edition of the book can be found [here](https://mdsr-book.github.io/mdsr2e/)
+<br>
+<br>
+* [R techniques by Yufei Qin of Princeton University](https://libguides.princeton.edu/prf.php?id=61080a78-7cdb-11ed-9922-0ad758b798c3)<br>
+  * [Using Stargazer to make publication-quality tables](https://libguides.princeton.edu/R-stargazer)
+  * [Time-Series Analysis in R: Event study](https://libguides.princeton.edu/R-Timeseries)
+  * [Reshape in R: Long/Wide format](https://libguides.princeton.edu/R-reshape)
+  * [Missing Data Imputation in R](https://libguides.princeton.edu/R-Missingdata)
+  * [Merge/Append in R: including fuzzy merge](https://libguides.princeton.edu/R-merge)
+  * [Loop in R: regress on multiple csv](https://libguides.princeton.edu/R-loop)
+  * [Logit, Ordered Logit, and Multinomial Logit Models in R](https://libguides.princeton.edu/R-logit)
+  * [Linear regression in R](https://libguides.princeton.edu/R-linear_regression)
+  * [DID in R: Differences-in-Differences R tutorial](https://libguides.princeton.edu/R-DID)
+  * [Descriptive Statistics in R](https://libguides.princeton.edu/R-Descriptive)
+  * [Data Visualization in R](https://libguides.princeton.edu/R-Visualization)
+  * [Cubic Interpolation in R](https://libguides.princeton.edu/R-Cubic)
+
+
 
 ## Jupyter Notebook for Machine Learning using Python
 
