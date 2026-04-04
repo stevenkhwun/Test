@@ -102,6 +102,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [K-Nearest Neighbors Classifier](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/KNN_Classification.ipynb)
 
+* [Comparing Random Forest and XGBoost modeling performance](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Random_%20Forests%20_XGBoost.ipynb)
+
 ## Jupyter Notebook tricks
 
 * [Jupyter Notebook tricks](https://nbviewer.org/github/stevenkhwun/gitABC/blob/main/jpynb_Tricks.ipynb)
