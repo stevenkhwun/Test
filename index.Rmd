@@ -128,7 +128,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Clustering<br>
   * [K-means Clustering](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/K-Means-Customer-Seg.ipynb)
-  * [Comparing DBSCAN and HDBSCAN]()
+  * [Comparing DBSCAN and HDBSCAN clustering](https://nbviewer.org/github/stevenkhwun/Machine_Learning_with_Python/blob/main/Comparing_DBScan_HDBScan.ipynb)
   
 * Dimension Reduction & Feature Engineering<br>
   * [Principal Component Analysis]()
