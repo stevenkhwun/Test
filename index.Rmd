@@ -43,6 +43,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Machine Learning for Official Statistics](https://stevenkhwun.github.io/Test/Books/Official_Statistics/ML_for_Official-Statistics.pdf), PDF version, by _United Nations Economic Commission For Europe, United Nations_. (2021)
 
+
+## Probability Theory
+
+* [Introduction to Probability](http://probabilitybook.net), Web version, by _Joseph K. Blitzstein and Jessica Hwang_. (2nd Edition, 2019)
+
+
 ## Python
 
 * [Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter](https://wesmckinney.com/book/), Web version, by _Wes McKinney_. (3rd Edition, September 2022)
