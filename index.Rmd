@@ -57,6 +57,8 @@ knitr::opts_chunk$set(echo = TRUE)
   
   The GitHub site of the book can be found [here](https://github.com/fzumstein/python-for-excel).
   
+* [Python Primer](https://nbviewer.org/github/stevenkhwun/Test/blob/main/Python_Primer.ipynb)
+
 
 ## R
 
