@@ -146,3 +146,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Jupyter Notebook tricks
 
 * [Jupyter Notebook tricks](https://nbviewer.org/github/stevenkhwun/gitABC/blob/main/jpynb_Tricks.ipynb)
+
+
+Testing, can be deleted.
